@@ -1,0 +1,22 @@
+<h2 align="center">Composant HOME</h2>
+
+Votre établissement est : {{  university  }}
+<h4>Liste des cours</h4>
+<ol>
+  <li *ngFor="let c of cours">{{c}}</li>
+</ol>
+
+<button (click)="welcome()" class="btn btn-success">Cliquer ici</button>
+<br/><br/>
+<div [class]="alertColor" role="alert">
+  This is a primary alert—check it out!
+</div>
+
+<button (click)="changeColorAlert()" class="btn btn-success">Change Alert Color</button>
+
+<h3 align="center">Formulaire de contact</h3>
+
+  Nom : <input type="text" class="form-control" [(ngModel)]="defaultNom"/>
+
+  Vous avez taper : {{defaultNom}}
+
